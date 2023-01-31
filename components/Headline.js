@@ -8,8 +8,7 @@ export function Headline(props) {
     return (
         <div className={styles.description}>
             <p>
-                {props.page} page&nbsp;
-                <code className={styles.code}>pages/{props.page}.js</code>
+                {props.page} page&nbsp;{props.children}
             </p>
             <div>
                 <a
@@ -28,6 +27,6 @@ export function Headline(props) {
                     />
                 </a>
             </div>
-        </div>
+        </div >
     );
 }
