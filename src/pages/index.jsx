@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    document.body.style.backgroundColor = 'pink';
+    document.body.style.backgroundColor = 'orange';
     console.log('マウント時');
 
     return () => {
