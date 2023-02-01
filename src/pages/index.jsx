@@ -29,8 +29,10 @@ export default function Home() {
 
       <Header />
 
-      <h1>{count}</h1>
-      <button onClick={handleClick}>ボタン</button>
+      <div className={styles.container}> 
+        <h1>{count}</h1>
+        <button onClick={handleClick}>ボタン</button>
+      </div>
 
       <main className={styles.main}>
         <Headline page='index'>
