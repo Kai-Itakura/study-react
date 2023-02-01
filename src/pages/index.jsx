@@ -7,12 +7,13 @@ import { Header } from 'src/components/Header'
 import { useCallback, useEffect } from 'react'
 
 export default function Home() {
-  const foo = 1;
+  const foo = '背景色を赤に変えますか？';
 
   const handleClick = useCallback((e) => {
     e.preventDefault();
     console.log(e.target.href);
     alert(foo);
+    document.body.style.backgroundColor = 'red';
   }, []);
 
   useEffect(() => {
