@@ -4,8 +4,19 @@ import { Links } from 'src/components/Links'
 import { Center } from 'src/components/Center'
 import { Headline } from 'src/components/Headline'
 import { Header } from 'src/components/Header'
+import { useCallback } from 'react'
+
 
 export default function Home() {
+
+  const foo = 1;
+
+  const handleClick = useCallback((e) => {
+    e.preventDefault();
+    console.log(e.target.href);
+    alert(foo);
+  }, []);
+
   return (
     <>
       <Head>
@@ -13,6 +24,8 @@ export default function Home() {
       </Head>
 
       <Header />
+
+      <a href='./about' onClick={handleClick}>ボタン</a>
 
       <main className={styles.main}>
         <Headline page='index'>
