@@ -21,7 +21,7 @@ export default function Home() {
         <Headline page='index'>
           {<code className={styles.code}>pages/index.js</code>}
         </Headline>
-        <Center />
+        <Center page='index' />
         <Links />
       </main>
     </>

@@ -21,7 +21,7 @@ export default function Home() {
         <Headline page='about'>
           {<code className={styles.code}>pages/about.js</code>}
         </Headline>
-        <Center />
+        <Center page='about' />
         <Links />
       </main>
     </>
