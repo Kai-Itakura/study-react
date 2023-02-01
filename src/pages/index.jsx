@@ -4,25 +4,20 @@ import { Links } from 'src/components/Links'
 import { Center } from 'src/components/Center'
 import { Headline } from 'src/components/Headline'
 import { Header } from 'src/components/Header'
-import { useCallback, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
-  const foo = '背景色を赤に変えますか？';
+  const [count, setCount] = useState(1);
 
-  const handleClick = useCallback((e) => {
-    e.preventDefault();
-    console.log(e.target.href);
-    alert(foo);
-    document.body.style.backgroundColor = 'red';
-  }, []);
+  const handleClick = (e) => {
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
+  };
 
   useEffect(() => {
     document.body.style.backgroundColor = 'orange';
-    console.log('マウント時');
-
     return () => {
       document.body.style.backgroundColor = '';
-      console.log('アンマウント時');
     };
   }, []);
 
@@ -34,7 +29,8 @@ export default function Home() {
 
       <Header />
 
-      <a href='./about' onClick={handleClick}>ボタン</a>
+      <h1>{count}</h1>
+      <button onClick={handleClick}>ボタン</button>
 
       <main className={styles.main}>
         <Headline page='index'>
