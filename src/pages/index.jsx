@@ -4,18 +4,19 @@ import { Links } from 'src/components/Links'
 import { Center } from 'src/components/Center'
 import { Headline } from 'src/components/Headline'
 import { Header } from 'src/components/Header'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 export default function Home() {
   const [count, setCount] = useState(1);
 
-  const handleClick = (e) => {
-    setCount((count) => count + 1);
-    setCount((count) => count + 1);
-  };
+  const handleClick = useCallback(() => {
+    if (count < 10) {
+      setCount((count) => count + 1);
+    }
+  }, [count]);
 
   useEffect(() => {
-    document.body.style.backgroundColor = 'orange';
+    document.body.style.backgroundColor = 'pink';
     return () => {
       document.body.style.backgroundColor = '';
     };
@@ -29,7 +30,7 @@ export default function Home() {
 
       <Header />
 
-      <div className={styles.container}> 
+      <div className={styles.container}>
         <h1>{count}</h1>
         <button onClick={handleClick}>ボタン</button>
       </div>
