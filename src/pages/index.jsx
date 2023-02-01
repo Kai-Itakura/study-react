@@ -4,17 +4,25 @@ import { Links } from 'src/components/Links'
 import { Center } from 'src/components/Center'
 import { Headline } from 'src/components/Headline'
 import { Header } from 'src/components/Header'
-import { useCallback } from 'react'
-
+import { useCallback, useEffect } from 'react'
 
 export default function Home() {
-
   const foo = 1;
 
   const handleClick = useCallback((e) => {
     e.preventDefault();
     console.log(e.target.href);
     alert(foo);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = 'pink';
+    console.log('マウント時');
+
+    return () => {
+      document.body.style.backgroundColor = '';
+      console.log('アンマウント時');
+    };
   }, []);
 
   return (
