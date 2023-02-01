@@ -1,5 +1,5 @@
 import styles from './Headline.module.css'
-import { Vercel } from './Vercel';
+import { Vercel } from 'src/components/Vercel';
 
 export function Headline(props) {
     return (
