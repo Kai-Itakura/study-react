@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './Vercel.module.css'
 
-export function Vercel() {
+export const Vercel = () => {
     return (
             <div>
                 <a

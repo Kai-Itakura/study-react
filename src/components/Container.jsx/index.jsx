@@ -26,7 +26,7 @@ const ITEMS = [
     }
 ];
 
-export function Container() {
+export const Container = () => {
     const [items, setItems] = useState(ITEMS);
     const handleReduce = useCallback(() => {
         setItems((prevItems) => {
