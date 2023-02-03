@@ -5,7 +5,7 @@ import { Header } from 'src/components/Header'
 import { Container } from '../components/Container.jsx'
 
 export default function About({
-  count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd
+  doubleCount, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd
 }) {
   return (
     <>
@@ -16,7 +16,7 @@ export default function About({
       <Header />
 
       <div className={styles.container}>
-        {isShow ? <h2>{count}</h2> : null}
+        {isShow ? <h2>{doubleCount}</h2> : null}
         <button onClick={handleClick}>ボタン</button>
         <button onClick={handleDisplay}>
           {isShow ? '非表示' : '表示'}
