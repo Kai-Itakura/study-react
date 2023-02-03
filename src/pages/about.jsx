@@ -1,14 +1,12 @@
 import Head from 'next/head'
 import styles from 'src/styles/Home.module.css'
-import { Links } from 'src/components/Links'
 import { Center } from 'src/components/Center'
-import { Headline } from 'src/components/Headline'
 import { Header } from 'src/components/Header'
+import { Container } from '../components/Container.jsx'
 
 export default function About({
   count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd
 }) {
-
   return (
     <>
       <Head>
@@ -38,11 +36,8 @@ export default function About({
       </div>
 
       <main className={styles.main}>
-        <Headline page='about'>
-          {<code className={styles.code}>pages/about.js</code>}
-        </Headline>
         <Center page='about' />
-        <Links />
+        <Container />
       </main>
     </>
   )
