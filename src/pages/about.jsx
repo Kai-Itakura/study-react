@@ -4,14 +4,10 @@ import { Links } from 'src/components/Links'
 import { Center } from 'src/components/Center'
 import { Headline } from 'src/components/Headline'
 import { Header } from 'src/components/Header'
-import { useCounter } from 'src/hooks/useCounter';
-import { useInputArray } from '../hooks/useInputArray'
-import { useBgPink } from '../hooks/useBgPink'
 
-export default function About() {
-  const { count, isShow, handleClick, handleDisplay } = useCounter();
-  const { text, array, handleChange, handleAdd } = useInputArray();
-  useBgPink();
+export default function About({
+  count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd
+}) {
 
   return (
     <>
