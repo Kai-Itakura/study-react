@@ -43,10 +43,10 @@ export function Container() {
 
     return (
         <>
-            <Headline page='index' items={items}>
+            <Headline page='index' items={items} handleReduce={handleReduce} handleIncrease={handleIncrease}>
                 {<code className={styles.code}>{items.length}</code>}
             </Headline>
-            <Links items={items} handleReduce={handleReduce} handleIncrease={handleIncrease}/>
+            <Links items={items}/>
         </>
     )
 }
