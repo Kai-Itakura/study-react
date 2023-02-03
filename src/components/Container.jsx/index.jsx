@@ -36,7 +36,6 @@ export function Container() {
 
     const handleIncrease = useCallback(() => {
         setItems((prevItems) => {
-            console.log(prevItems.slice(0, prevItems.length + 1));
             return items.slice(0, prevItems.length + 1);
         });
     }, []);
